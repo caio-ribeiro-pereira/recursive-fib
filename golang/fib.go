@@ -15,15 +15,13 @@ func Fibonacci(n uint64) uint64 {
 }
 
 func main() {
-	fmt.Print("Golang Recursive Fib Benchmark...\n")
 	sequences, err := strconv.ParseUint(os.Args[1], 10, 64)
 	if err != nil {
-		fmt.Println("Invalid argument")
+		fmt.Printf("[Go] Invalid argument\n")
 	} else {
-		fmt.Printf("Calculating fib %dx...\n", sequences)
 		start := time.Now()
 		output := Fibonacci(sequences)
 		elapsed := time.Since(start)
-		fmt.Printf("Result: %d\nTime elapsed: %.3fms\n", output, (elapsed.Seconds() * 1000))
+		fmt.Printf("[Go] Fib: %dx | Result: %d | Time: %.3fms\n", sequences, output, (elapsed.Seconds() * 1000))
 	}
 }

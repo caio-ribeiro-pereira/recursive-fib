@@ -1,8 +1,6 @@
 import sys
 import time
 
-print("Python Recursive Fib Benchmark...")
-
 def fibonnaci(n):
   if (n <= 1):
     return n
@@ -11,11 +9,10 @@ def fibonnaci(n):
 
 try:
   sequences = int(sys.argv[1])
-  print("Calculating fib %dx..." %(sequences))
   start = time.time()
   output = fibonnaci(sequences)
   finish = time.time()
   elapsed = (finish - start) * 1000
-  print("Result: %d\nTime elapsed: %.3fms" %(output, elapsed))
+  print("[Python] Fib: %dx | Result: %d | Time: %.3fms" %(sequences, output, elapsed))
 except:
-  print("Invalid arguments")
+  print("[Python] Invalid arguments")

@@ -1,5 +1,3 @@
-console.log("Nodejs Recursive Fib Benchmark...")
-
 const fibonacci = (n) => {
   if (n <= 1) return n;
   return fibonacci(n - 1) + fibonacci(n - 2);
@@ -7,11 +5,11 @@ const fibonacci = (n) => {
 
 try {
   const sequences = Number(process.argv[2]);
-  console.log(`Calculating fib ${sequences}x...`);
-  console.time("Time elapsed");
+  const start = process.hrtime();
   const output = fibonacci(sequences);
-  console.log(`Result: ${output}`);
-  console.timeEnd("Time elapsed");
+  const time = process.hrtime(start);
+  const elapsed = time[0] * 1000 + time[1] / 1000000;
+  console.log(`[Node.js] Fib: ${sequences}x | Result: ${output} | Time: ${elapsed.toFixed(3)}ms`);
 } catch {
-  console.log("Invalid argument");
+  console.log("[Node.js] Invalid argument");
 }
