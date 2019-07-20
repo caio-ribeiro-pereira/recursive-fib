@@ -9,7 +9,7 @@ begin
   elapsed = Time.measure do
     output = fibonacci(sequences)
   end
-  puts "[Crystal] Fib: #{sequences}x | Result: #{output} | Time: #{elapsed.total_milliseconds.round(3)}ms"
+  puts "[Crystal] Fib: #{sequences}x | Result: #{output} | Time: #{elapsed.total_milliseconds.to_i}ms"
 rescue
   puts "[Crystal] Invalid argument"
 end

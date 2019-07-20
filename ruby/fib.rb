@@ -9,7 +9,7 @@ begin
   output = fibonacci(sequences)
   finish = Process.clock_gettime(Process::CLOCK_MONOTONIC)
   elapsed = (finish - start) * 1000
-  puts "[Ruby] Fib: #{sequences}x | Result: #{output} | Time: #{elapsed.round(3)}ms"
+  puts "[Ruby] Fib: #{sequences}x | Result: #{output} | Time: #{elapsed.to_i}ms"
 rescue
   puts "[Ruby] Invalid argument"
 end

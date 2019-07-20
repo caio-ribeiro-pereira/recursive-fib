@@ -11,10 +11,10 @@ unsigned long long int fibonnaci(int n) {
 
 int main(int argc, char *argv[]) {
   int sequences = atoi(argv[1]);
-  float start = clock();
+  int start = clock();
   unsigned long long int output = fibonnaci(sequences);
-  float end = clock();
-  float elapsed = (end - start) / (CLOCKS_PER_SEC / 1000);
-  printf("[C] Fib %dx | Result: %llu | Time: %.3fms\n", sequences, output, elapsed);
+  int end = clock();
+  int elapsed = (end - start) / (CLOCKS_PER_SEC / 1000);
+  printf("[C] Fib %dx | Result: %llu | Time: %dms\n", sequences, output, elapsed);
   return 0;
 }
