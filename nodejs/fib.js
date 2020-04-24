@@ -9,7 +9,7 @@ try {
   const output = fibonacci(sequences);
   const time = process.hrtime(start);
   const elapsed = time[0] * 1000 + time[1] / 1000000;
-  console.log(`[Node.js] Fib: ${sequences}x | Result: ${output} | Time: ${elapsed.toFixed(0)}ms`);
+  console.log(`[Node.js]\nFib: ${sequences}x | Result: ${output} | Time: ${elapsed.toFixed(0)}ms`);
 } catch {
   console.log("[Node.js] Invalid argument");
 }

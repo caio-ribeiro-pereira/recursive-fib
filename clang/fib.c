@@ -15,6 +15,6 @@ int main(int argc, char *argv[]) {
   unsigned long long int output = fibonnaci(sequences);
   int end = clock();
   int elapsed = (end - start) / (CLOCKS_PER_SEC / 1000);
-  printf("[C] Fib %dx | Result: %llu | Time: %dms\n", sequences, output, elapsed);
+  printf("[Clang]\nFib: %dx | Result: %llu | Time: %dms\n", sequences, output, elapsed);
   return 0;
 }

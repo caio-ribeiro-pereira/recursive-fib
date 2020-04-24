@@ -13,6 +13,6 @@ try:
   output = fibonnaci(sequences)
   finish = time.time()
   elapsed = (finish - start) * 1000
-  print("[Python] Fib: %dx | Result: %d | Time: %.0fms" %(sequences, output, elapsed))
+  print("[Python]\nFib: %dx | Result: %d | Time: %.0fms" %(sequences, output, elapsed))
 except:
   print("[Python] Invalid arguments")

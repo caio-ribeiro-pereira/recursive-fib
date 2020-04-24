@@ -22,6 +22,6 @@ func main() {
 		start := time.Now()
 		output := Fibonacci(sequences)
 		elapsed := time.Since(start)
-		fmt.Printf("[Go] Fib: %dx | Result: %d | Time: %.0fms\n", sequences, output, (elapsed.Seconds() * 1000))
+		fmt.Printf("[Golang]\nFib: %dx | Result: %d | Time: %.0fms\n", sequences, output, (elapsed.Seconds() * 1000))
 	}
 }
