@@ -14,7 +14,7 @@ try {
     $start = hrtime(true);
     $output = fibonacci($sequences);
     $end = hrtime(true);
-    $elapsed = ($end - $start) / 1000000;
+    $elapsed = round(($end - $start) / 1000000);
 
     echo "[PHP]\nFib: {$sequences}x | Result: {$output} | Time: {$elapsed}ms";
 } catch (Throwable $exception) {
