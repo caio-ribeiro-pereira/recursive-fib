@@ -10,6 +10,7 @@ A simple recursive fibonnaci function running in some popular programming langua
 * Install Go (https://golang.org)
 * Install Java (https://www.java.com)
 * Install Nodejs (https://nodejs.org)
+* Install PHP (https://www.php.net)
 * Install Python (https://www.python.org)
 * Install Ruby (https://www.ruby-lang.org)
 * Install Rust (https://www.rust-lang.org)

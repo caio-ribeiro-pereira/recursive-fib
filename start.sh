@@ -8,6 +8,7 @@ elixir ./elixir/fib.exs $sequence
 go run ./golang/fib.go $sequence
 javac java/fib.java; cd java/; java fib $sequence; cd ..
 node ./nodejs/fib.js $sequence
+php ./php/fib.php $sequence
 python ./python/fib.py $sequence
 ruby ./ruby/fib.rb $sequence
 rustc ./rust/fib.rs -o ./rust/fib && ./rust/fib $sequence
