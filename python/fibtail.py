@@ -11,11 +11,10 @@ def fibonnaci(n, a, b):
 
 try:
   sequences = int(sys.argv[1])
-  print("Python Fib: %dx" %(sequences))
   start = time.time()
   output = fibonnaci(sequences, 0, 1)
   finish = time.time()
   elapsed = (finish - start) * 1000
-  print("Result: %d | Time: %.0fms" %(output, elapsed))
+  print("Python Fib: %dx\nResult: %d | Time: %.0fms" %(sequences, output, elapsed))
 except Exception as err:
   print(err)

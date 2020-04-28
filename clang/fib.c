@@ -11,11 +11,10 @@ unsigned long long int fibonacci(int n) {
 
 int main(int argc, char *argv[]) {
   int sequences = atoi(argv[1]);
-  printf("C Fib: %dx\n", sequences);
   int start = clock();
   unsigned long long int output = fibonacci(sequences);
   int end = clock();
   int elapsed = (end - start) / (CLOCKS_PER_SEC / 1000);
-  printf("Result: %llu | Time: %dms\n", output, elapsed);
+  printf("C Fib: %dx\nResult: %llu | Time: %dms\n", sequences, output, elapsed);
   return 0;
 }

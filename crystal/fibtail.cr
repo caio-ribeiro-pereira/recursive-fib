@@ -6,12 +6,11 @@ end
 
 begin
   sequences = ARGV[0].to_u64
-  puts "Crystal Fib: #{sequences}x"
   output = 0
   elapsed = Time.measure do
     output = fibonacci(sequences, 0, 1)
   end
-  puts "Result: #{output} | Time: #{elapsed.total_milliseconds.to_i}ms"
+  puts "Crystal Fib: #{sequences}x\nResult: #{output} | Time: #{elapsed.total_milliseconds.to_i}ms"
 rescue e
   puts e
 end

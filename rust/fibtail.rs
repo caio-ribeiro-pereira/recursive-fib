@@ -22,9 +22,8 @@ fn main() {
       return;
     },
   };
-  println!("Rust Fib: {}x", sequences);
   let clock = Instant::now();
   let output = fibonnaci(sequences, 0, 1);
   let elapsed = clock.elapsed().as_millis();
-  println!("Result: {} | Time: {}ms", output, elapsed);
+  println!("Rust Fib: {}x\nResult: {} | Time: {}ms", sequences, output, elapsed);
 }

@@ -15,11 +15,7 @@ A simple recursive fibonnaci function running in some popular programming langua
 * Install Ruby (https://www.ruby-lang.org)
 * Install Rust (https://www.rust-lang.org)
 
-After install the latest version of these programming languages you can run `./start.sh` to start the benchmark based on the number of sequence you wanna test, a good number is 40 or more.
-
-Below take a look on a screenshot of a benchmark from my computer:
-
-![Benchmark output](screenshot.png)
+After install the latest version of these programming languages you can run `./init-single-fib.sh` or `./init-single-fibtail.sh` to start the benchmark based on the number of sequence you wanna test, a good sequence number is 40 or higher.
 
 # Author
 

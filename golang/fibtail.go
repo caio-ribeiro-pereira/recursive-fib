@@ -7,11 +7,14 @@ import (
 	"os"
 )
 
-func Fibonacci(n uint64) uint64 {
-	if n <= 1 {
-		return n
+func Fibonacci(n uint64, a uint64, b uint64) uint64 {
+	if n == 0 {
+		return a
 	}
-	return Fibonacci(n - 1) + Fibonacci(n - 2)
+	if n == 1 {
+		return b
+	}
+	return Fibonacci(n - 1, b, a + b)
 }
 
 func main() {
@@ -20,7 +23,7 @@ func main() {
 		fmt.Println(err)
 	} else {
 		start := time.Now()
-		output := Fibonacci(sequences)
+		output := Fibonacci(sequences, 0, 1)
 		elapsed := time.Since(start)
 		fmt.Printf("Golang Fib: %dx\nResult: %d | Time: %.0fms\n", sequences, output, (elapsed.Seconds() * 1000))
 	}

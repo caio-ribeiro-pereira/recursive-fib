@@ -8,12 +8,11 @@ public class fibtail {
   public static void main(String[] args) {
     try {
       int sequences = Integer.parseInt(args[0]);
-      System.out.printf("Java Fib: %dx\n", sequences);
       long start = System.currentTimeMillis();
       long output = fibtail.fibonacci(sequences, 0, 1);
       long finish = System.currentTimeMillis();
       long elapsed = (finish - start);
-      System.out.printf("Result: %d | Time: %dms\n", output, elapsed);
+      System.out.printf("Java Fib: %dx\nResult: %d | Time: %dms\n", sequences, output, elapsed);
     } catch (Exception e) {
       System.out.println(e);
     }
