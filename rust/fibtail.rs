@@ -1,11 +1,14 @@
 use std::env;
 use std::time::{Instant};
 
-fn fibonnaci(n: u64) -> u64 {
-  if n <= 1 {
-    return n;
+fn fibonnaci(n: u64, a: u64, b: u64) -> u64 {
+  if n == 0 {
+    return a;
   }
-  return fibonnaci(n - 1) + fibonnaci(n - 2);
+  if n == 1 {
+    return b;
+  }
+  return fibonnaci(n - 1, b, a + b);
 }
 
 fn main() {
@@ -21,7 +24,7 @@ fn main() {
   };
   println!("Rust Fib: {}x", sequences);
   let clock = Instant::now();
-  let output = fibonnaci(sequences);
+  let output = fibonnaci(sequences, 0, 1);
   let elapsed = clock.elapsed().as_millis();
   println!("Result: {} | Time: {}ms", output, elapsed);
 }

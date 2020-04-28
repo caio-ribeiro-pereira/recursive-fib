@@ -1,4 +1,7 @@
 /clang/fib
 /rust/fib
 /java/fib.class
+/clang/fibtail
+/rust/fibtail
+/java/fibtail.class
 .DS_Store
