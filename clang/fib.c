@@ -11,7 +11,7 @@ unsigned long long int fibonacci(int n) {
 
 int main(int argc, char *argv[]) {
   int sequences = atoi(argv[1]);
-  printf("C Fib: %dx", sequences);
+  printf("C Fib: %dx\n", sequences);
   int start = clock();
   unsigned long long int output = fibonacci(sequences);
   int end = clock();
